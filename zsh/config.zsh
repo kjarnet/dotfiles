@@ -1,7 +1,7 @@
 if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
+  export PS1='%m:%3~%# '
 else
-  export PS1='%3~$(git_info_for_prompt)%# '
+  export PS1='%3~%# '
 fi
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
@@ -44,5 +44,4 @@ bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
