@@ -9,7 +9,8 @@ Notable changes from holman's project include:
 ## dependencies
 
  * git
- * ruby (install with [rvm](https://rvm.io/rvm/install/)
+ * ruby (install with [rvm](https://rvm.io/rvm/install/)), 
+and if rvm doesn't work in e.g. gnome-terminal, enable login-shell (see [faq](https://rvm.io/support/faq/)).
 
 ## install
 
