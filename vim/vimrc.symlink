@@ -60,7 +60,7 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
-
+nmap <F8> :TagbarToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Visual Cues
@@ -73,6 +73,9 @@ set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
+set cursorline
+hi cursorline guibg=#333333 
+hi CursorColumn guibg=#333333
 
 
 " ---------------------------------------------------------------------------
@@ -82,4 +85,9 @@ set visualbell             " shut the fuck up
 function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
-map ,s :call StripWhitespace ()<CR>
+" map ,s :call StripWhitespace ()<CR>
+
+call pathogen#infect()
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+set suffixesadd+=.js " try .js as a file-suffix when using gf-command so it can be used in require.js imports
+
