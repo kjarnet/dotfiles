@@ -87,7 +87,18 @@ function! StripWhitespace ()
 endfunction
 " map ,s :call StripWhitespace ()<CR>
 
+
+" ---------------------------------------------------------------------------
+"  Javascript stuff
+" ---------------------------------------------------------------------------
 call pathogen#infect()
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 set suffixesadd+=.js " try .js as a file-suffix when using gf-command so it can be used in require.js imports
+
+
+" ---------------------------------------------------------------------------
+"  Other stuff
+" ---------------------------------------------------------------------------
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! %!sudo tee > /dev/null %
 
