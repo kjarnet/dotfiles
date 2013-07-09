@@ -18,6 +18,7 @@
         resetfile = checkout --
         hardreset = reset --hard
         lol = log --pretty=oneline --abbrev-commit --graph --decorate
+        lolb = log --pretty=oneline --abbrev-commit --graph --decorate --first-parent
         logpretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
         alias = config --get-regexp 'alias.*'
         # this is aliased to git reset --soft HEAD^ by git-sh, but by overriding it here I dont get so confused when I forget "stash" in "stash pop"
