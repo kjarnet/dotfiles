@@ -76,7 +76,9 @@ set visualbell             " shut the fuck up
 set cursorline
 hi cursorline guibg=#333333 
 hi CursorColumn guibg=#333333
-
+highlight ColorColumn ctermbg=235 guibg=#2c2d27 " set highlight color
+"let &colorcolumn=join(range(81,999),",")       " highlight from column 80 outwards
+let &colorcolumn="80,".join(range(120,999),",") " highlight column 80 and from column 120 outwards
 
 " ---------------------------------------------------------------------------
 "  Strip all trailing whitespace in file
