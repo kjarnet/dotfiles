@@ -1,0 +1,11 @@
+# Shared and persistent connection (http://interrobeng.com/2013/08/25/speed-up-git-5x-to-50x/)
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+ControlPersist yes
+
+Host amazon
+ User myuser
+ Port 2222
+ HostName 54.228.243.110
+ IdentityFile ~/.ssh/ec2_ubuntu1210_rsa
+
