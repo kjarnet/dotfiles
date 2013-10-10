@@ -20,7 +20,7 @@ setopt NO_HUP
 setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
+setopt HIST_VERIFY # Whenever the user enters a line containing a history substitution, don't execute the line immediately. Instead, perform history substitution and reload the line into the editing buffer.
 setopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
