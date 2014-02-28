@@ -18,8 +18,10 @@
         resetfile = checkout --
         hardreset = reset --hard
         lol = log --pretty=oneline --abbrev-commit --graph --decorate
-        lolb = log --pretty=oneline --abbrev-commit --graph --decorate --first-parent
-        logpretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        lolb = log --pretty=oneline --abbrev-commit --decorate --first-parent
+        logpretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+        loll = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cn (%e) (%cr)%Creset' --all
+        lollb = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cn (%e) (%cr)%Creset' --first-parent
         alias = config --get-regexp 'alias.*'
         # this is aliased to git reset --soft HEAD^ by git-sh, but by overriding it here I dont get so confused when I forget "stash" in "stash pop"
         pop = stash pop
@@ -27,6 +29,7 @@
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
+        wdiff = diff --color-words
 [color]
         diff = auto
         status = auto
@@ -52,6 +55,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+        autocrlf = input
 [apply]
         whitespace = nowarn
 [merge]
