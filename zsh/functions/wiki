@@ -1,0 +1,2 @@
+wiki() { dig +short txt "$*".wp.dg.cx; }
+
