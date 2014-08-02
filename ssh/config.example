@@ -3,7 +3,7 @@ ControlMaster auto
 ControlPath /tmp/%r@%h:%p
 ControlPersist yes
 
-Host amazon
+Host amazon ec2 elasticloud
  User myuser
  Port 2222
  HostName 54.228.243.110
