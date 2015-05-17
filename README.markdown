@@ -1,4 +1,4 @@
-# kjarnet's dotfiles
+# Kjarnet's Dotfiles
 
 These are my dotfiles, mostly copied from [holman](https://github.com/holman/dotfiles) (including most of this readme).
 Notable changes from holman's project include:
@@ -6,14 +6,14 @@ Notable changes from holman's project include:
  * removed dependencies to homebrew
  * removed some mac and ruby-dev-stuff and added some linux and java-dev files.
 
-## dependencies
+## Dependencies
 
  * git
  * zsh
  * ruby (install with [rvm](https://rvm.io/rvm/install/)
 and if rvm doesn't work in e.g. gnome-terminal, enable login-shell (see [faq](https://rvm.io/support/faq/))).
 
-## install
+## Install
 
 Run this:
 
@@ -22,7 +22,24 @@ git clone https://github.com/kjarnet/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
-## components
+To enable Tern.js vim-plugin,
+you need to also have node and npm installed.
+For ubuntu, do:
+
+```sh
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get install -y nodejs
+
+```
+
+and then do this additional step:
+
+```sh
+cd ~/.dotfiles/vim/vim.symlink/bundle/tern_for_vim
+npm install
+```
+
+## Contents
 
 There are a few special files in the hierarchy.
 
