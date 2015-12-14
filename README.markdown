@@ -18,10 +18,15 @@ and if rvm doesn't work in e.g. gnome-terminal, enable login-shell (see [faq](ht
 Run this:
 
 ```sh
-git clone https://github.com/kjarnet/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/kjarnet/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
+
+The `--recursive` argument is for cloning all git submodules as well.
+Submodules are used for vim pathogen plugins.
+You can read more about that [here](vim/vim.symlink/bundle/README.md).
+
 To enable Tern.js vim-plugin,
 you need to also have node and npm installed.
 For ubuntu, do:
