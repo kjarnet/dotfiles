@@ -20,7 +20,7 @@ Run this:
 ```sh
 git clone --recursive https://github.com/kjarnet/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-rake install
+./bootstrap.sh
 ```
 
 The `--recursive` argument is for cloning all git submodules as well.

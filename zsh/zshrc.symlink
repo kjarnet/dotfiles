@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # cdpaths can be jumped directly into with cd 'foldername'
-cdpath=(/opt/ ~ ~/Prosjekter ~/Knowit ~/Knowit/lisa-src/komponenter ~/Knowit/lisa-src/test/src/test/tekstmaler)
+cdpath=(/opt/ ~ ~/Prosjekter)
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
