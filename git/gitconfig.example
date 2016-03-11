@@ -30,6 +30,7 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         wdiff = diff --color-words
+        pullff = pull --ff-only
 [color]
         diff = auto
         status = auto
