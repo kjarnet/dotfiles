@@ -21,4 +21,9 @@ compinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
 
+# initialize bash autocomplete files
+autoload bashcompinit
+bashcompinit
+for config_file ($ZSH/**/*completion.sh) source $config_file
+
 

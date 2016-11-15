@@ -8,3 +8,5 @@ alias migrate='rake db:migrate db:test:clone'
 
 alias brake='bundle exec rake'
 
+alias bjekyll='bundle exec jekyll'
+

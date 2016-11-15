@@ -4,4 +4,5 @@
 # https://github.com/mikaelbr/node-notifier/issues/61#issuecomment-118653098
 # Run first: brew update && brew install reattach-to-user-namespace
 set -g default-command "which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL -l"
+set -g history-limit 5000
 
