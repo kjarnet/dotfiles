@@ -21,6 +21,7 @@ Run this:
 git clone --recursive https://github.com/kjarnet/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./bootstrap.sh
+chsh -s $(which zsh)
 ```
 
 The `--recursive` argument is for cloning all git submodules as well.
