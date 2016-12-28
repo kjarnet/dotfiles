@@ -1,6 +1,14 @@
 # shortcut to this dotfiles path is $DOT
+setopt extendedglob
+
 export DOT=$HOME/.dotfiles
 
+for file in $DOT/zsh/*.zsh~**/antigen.zsh
+do
+  echo "loading "$file
+  source $file
+done
+echo "loading antigen"
 source $DOT/zsh/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -8,13 +16,13 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle lein
-antigen bundle command-not-found
+antigen bundle mvn
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# node version manager
+antigen bundle lukechilds/zsh-nvm
 
 # Load the theme.
 antigen theme robbyrussell
@@ -26,6 +34,7 @@ antigen apply
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
 then
+  echo "loading localrc"
   source ~/.localrc
 fi
 
