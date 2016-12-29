@@ -3,11 +3,6 @@ setopt extendedglob
 
 export DOT=$HOME/.dotfiles
 
-for file in $DOT/zsh/*.zsh~**/antigen.zsh
-do
-  echo "loading "$file
-  source $file
-done
 echo "loading antigen"
 source $DOT/zsh/antigen.zsh
 
@@ -29,6 +24,13 @@ antigen theme robbyrussell
 
 # Tell antigen that you're done.
 antigen apply
+echo "loaded all bundles"
+
+for file in $DOT/zsh/*.zsh~**/antigen.zsh
+do
+  echo "loading "$file
+  source $file
+done
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.

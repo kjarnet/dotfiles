@@ -1,2 +1,3 @@
-echo "hello world"
+bindkey -v
+echo "applied settings"
 
