@@ -17,7 +17,7 @@ Notable changes from holman's project include:
 Run this:
 
 ```sh
-git clone --recursive https://github.com/kjarnet/dotfiles.git ~/.dotfiles
+git clone --recursive git@github.com:kjarnet/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./bootstrap.sh
 chsh -s $(which zsh)
@@ -57,6 +57,6 @@ There are a few special files in the hierarchy.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `rake install`.
-- **zsh/\*.zsh**: Any files ending in `.zsh` get loaded by zshrc.
+- **zsh/\*.zsh**: Any files in `/zsh/` directory ending in `.zsh` get loaded by zshrc.
 
 
