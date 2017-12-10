@@ -23,6 +23,10 @@ cd ~/.dotfiles
 chsh -s $(which zsh)
 ```
 
+`chsh` will change your default shell,
+and will take effect from your next login.
+Until next login, you can start zsh with the `zsh` command.
+
 The `--recursive` argument is for cloning all git submodules as well.
 Submodules are used for vim pathogen plugins.
 You can read more about that [here](vim/vim.symlink/bundle/README.md).
