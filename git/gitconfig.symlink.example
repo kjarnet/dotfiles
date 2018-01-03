@@ -1,10 +1,7 @@
 # Sample gitconfig
 [user]
-        name = x
-        email = x@x.com
-[github]
-        user = x
-        token = x
+        name = AUTHORNAME
+        email = AUTHOREMAIL
 
 # End of personal stuff - cutnpaste from here
 [alias]
