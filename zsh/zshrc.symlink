@@ -43,5 +43,6 @@ then
   source ~/.localrc
 fi
 
-
+# Fuzzy complete - depends on fzf application
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
