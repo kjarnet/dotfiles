@@ -1,13 +1,20 @@
+/git/gitconfig.symlink
+
+/vim/vim.symlink/.netrwhist
+/vim/vim.symlink/bundle/*/.git/**
+/vim/nvim.config-symlink/plugged
+
 sublime2/User/Package\ Control.sublime-settings
-vim/vim.symlink/.netrwhist
-vim/vim.symlink/bundle/*/.git/**
-nvim.config-symlink/plugged
-nvim.config-symlink/plugged/**
+
 atom.symlink/compile-cache/
 atom.symlink/packages/
 atom.symlink/storage/
 atom.symlink/.apm/
 atom.symlink/blob-store/
-posten/
-/git/gitconfig.symlink
+
+# Visual Studio Code: ignore everything except user settings
+/Code.config-symlink/*
+!/Code.config-symlink/User
+/Code.config-symlink/User/*
+!/Code.config-symlink/User/settings.json
 
