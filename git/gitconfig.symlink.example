@@ -3,6 +3,9 @@
         name = AUTHORNAME
         email = AUTHOREMAIL
 
+[includeIf "gitdir:~/WORKFOLDER/"]
+    path = ~/WORKFOLDER/.gitconfig
+
 # End of personal stuff - cutnpaste from here
 [alias]
         co = checkout

@@ -41,8 +41,18 @@ setup_gitconfig () {
     read -e git_authorname
     user ' - What is your github author email?'
     read -e git_authoremail
+    user ' - What is your work git email?'
+    read -e git_workemail
+    user ' - What is the name of your work folder?'
+    read -e git_workfolder
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g"\
+	    -e "s/AUTHOREMAIL/$git_authoremail/g"\
+	    -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g"\
+	    -e "s/WORKFOLDER/$git_workfolder/g"\
+	    git/gitconfig.symlink.example > git/gitconfig.symlink
+
+    echo -e "[user]\n  email = $git_workemail" > ~/$git_workfolder/.gitconfig
 
     success 'gitconfig'
   fi
