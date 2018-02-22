@@ -152,12 +152,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Take screenshot
+bindsym $mod+Print exec scrot -s
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
 }
 
-exec --no-startup-id /usr/bin/setxkbmap -layout "no,us"
-exec --no-startup-id /usr/bin/setxkbmap -option "grp:menu_toggle"
+# Clipster: https://github.com/mrichar1/clipster#installation
+# Start clipster daemon
+exec --no-startup-id clipster -d
+
+# shortcut to selection widget (primary)
+bindsym $mod+c exec clipster -sp
+
+exec --no-startup-id /usr/bin/setxkbmap -layout "no,us" -option "grp:menu_toggle"
 

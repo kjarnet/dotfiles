@@ -1,7 +1,7 @@
 {
     "editor.formatOnSave": true,
     "prettier.requireConfig": true,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Monokai",
     "javascript.validate.enable": false,
     "files.exclude": {
         "**/.git": true,
@@ -17,6 +17,9 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-w>": false,
+        "<C-k>": false,
+        "<C-s>": false,
+        "<C-.>": false,
     },
     "vim.insertModeKeyBindings": [
         {
@@ -41,4 +44,7 @@
         "suppressWelcomeNotice": true
     },
     "git.autofetch": true,
+    "openInGitHub.gitHubDomain": "https://skreia.teu.tomra.corp",
+    "openInGitHub.requireSelectionForLines": false, // If enabled, the copied or opened URL won't include line number(s) unless there's an active selection
+    "openInGitHub.providerType": "gitlab" //github, gitlab, bitbucket, ...
 }
