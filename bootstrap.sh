@@ -52,7 +52,8 @@ setup_gitconfig () {
 	    -e "s/WORKFOLDER/$git_workfolder/g"\
 	    git/gitconfig.symlink.example > git/gitconfig.symlink
 
-    echo -e "[user]\n  email = $git_workemail" > ~/$git_workfolder/.gitconfig
+    [[ -d $HOME/$git_workfolder ]] || mkdir $HOME/$git_workfolder
+    echo -e "[user]\n  email = $git_workemail" > $HOME/$git_workfolder/.gitconfig
 
     success 'gitconfig'
   fi
@@ -147,6 +148,7 @@ install_dotfiles () {
   
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.config-symlink' -not -path '*.git*')
   do
+    [[ -d $HOME/.config ]] || mkdir $HOME/.config
     dst="$HOME/.config/$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
