@@ -1,0 +1,4 @@
+cdf() { cd FAVFOLDER/"$1"; }
+_cdf() { _files -W FAVFOLDER; }
+compdef _cdf cdf
+

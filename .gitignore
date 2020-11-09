@@ -1,4 +1,5 @@
 /git/gitconfig.symlink
+/zsh/favfolder.zsh
 
 /vim/vim.symlink/.netrwhist
 /vim/vim.symlink/bundle/*/.git/**

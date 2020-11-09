@@ -55,7 +55,23 @@ setup_gitconfig () {
     [[ -d $HOME/$git_workfolder ]] || mkdir $HOME/$git_workfolder
     echo -e "[user]\n  email = $git_workemail" > $HOME/$git_workfolder/.gitconfig
 
-    success 'gitconfig'
+    success 'gitconfig set up'
+  fi
+}
+
+setup_other () {
+  if ! [ -f zsh/favfolder.zsh ] && [ -f zsh/favfolder.zsh.example ]
+  then
+    info 'set favorite folder'
+
+    user ' - What is your favorite folder?'
+    read -e favoritefolder
+
+    escaped_favfolder=$(printf '%s\n' "$favoritefolder" | sed -e 's/[\/&]/\\&/g')
+    sed -e "s/FAVFOLDER/${escaped_favfolder}/g"\
+	    zsh/favfolder.zsh.example > zsh/favfolder.zsh
+
+    success 'favorite folder set'
   fi
 }
 
@@ -155,6 +171,7 @@ install_dotfiles () {
 }
 
 setup_gitconfig
+setup_other
 install_dotfiles
 
 echo ''
