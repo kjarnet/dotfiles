@@ -1,6 +1,3 @@
-[submodule "vim/vim.symlink/bundle/tern_for_vim"]
-	path = vim/vim.symlink/bundle/tern_for_vim
-	url = https://github.com/ternjs/tern_for_vim.git
 [submodule "vim/vim.symlink/bundle/jshint.vim"]
 	path = vim/vim.symlink/bundle/jshint.vim
 	url = https://github.com/wookiehangover/jshint.vim.git
