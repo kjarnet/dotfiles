@@ -21,10 +21,10 @@ ssh-connect() {
     [ -d ~/tmp ] || mkdir ~/tmp
     echo -e 'y\n' | ssh-keygen -t rsa -f ~/tmp/temp -N '' >/dev/null 2>&1
 
-    INSTANCE_DESCRIPTION=`aws ec2 describe-instances --profile $1 --filters Name=instance-state-name,Values=running Name=tag:Name,Values=ssm-bastion --output json | jq .Reservations[0].Instances[0]`
+    INSTANCE_DESCRIPTION=$(aws ec2 describe-instances --profile $1 --filters Name=instance-state-name,Values=running Name=tag:Name,Values=ssm-bastion --output json | jq ".Reservations[0].Instances[0]")
 
-    INSTANCE_ID=`echo $INSTANCE_DESCRIPTION | jq  .InstanceId -r`
-    INSTANCE_AVAILABILITY_ZONE=`echo $INSTANCE_DESCRIPTION | jq  .Placement.AvailabilityZone -r`
+    INSTANCE_ID=$(echo $INSTANCE_DESCRIPTION | jq  ".InstanceId" -r)
+    INSTANCE_AVAILABILITY_ZONE=$(echo $INSTANCE_DESCRIPTION | jq  ".Placement.AvailabilityZone" -r)
     if [ -z "$INSTANCE_ID" ]; then
         echo "Renew your aws-mfa!"
         return 2
@@ -63,10 +63,10 @@ rds-tunnel() {
     [ -d ~/tmp ] || mkdir ~/tmp
     echo -e 'y\n' | ssh-keygen -t rsa -f ~/tmp/temp -N '' >/dev/null 2>&1
 
-    INSTANCE_DESCRIPTION=`aws ec2 describe-instances --profile $1 --filters Name=instance-state-name,Values=running Name=tag:Name,Values=ssm-bastion --output json | jq .Reservations[0].Instances[0]`
+    INSTANCE_DESCRIPTION=$(aws ec2 describe-instances --profile $1 --filters Name=instance-state-name,Values=running Name=tag:Name,Values=ssm-bastion --output json | jq ".Reservations[0].Instances[0]")
 
-    INSTANCE_ID=`echo $INSTANCE_DESCRIPTION | jq  .InstanceId -r`
-    INSTANCE_AVAILABILITY_ZONE=`echo $INSTANCE_DESCRIPTION | jq  .Placement.AvailabilityZone -r`
+    INSTANCE_ID=$(echo $INSTANCE_DESCRIPTION | jq  ".InstanceId" -r)
+    INSTANCE_AVAILABILITY_ZONE=$(echo $INSTANCE_DESCRIPTION | jq  ".Placement.AvailabilityZone" -r)
     if [ -z "$INSTANCE_ID" ]; then
         echo "Renew your aws-mfa!"
         return 2
@@ -92,5 +92,6 @@ rds-tunnel() {
       -o "ServerAliveInterval=60" \
       -o ProxyCommand="aws --profile $1 ssm start-session --target %h --document AWS-StartSSHSession --parameters portNumber=%p" \
       ec2-user@$INSTANCE_ID
+
 }
 
