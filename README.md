@@ -3,18 +3,26 @@
 These are my dotfiles, mostly copied from [holman](https://github.com/holman/dotfiles) (including most of this readme).
 Notable changes from holman's project include:
 
- * removed dependencies to homebrew
- * removed most zsh stuff and use [antigen](http://antigen.sharats.me) instead
+* removed dependencies to homebrew
+* removed most zsh stuff and use [oh-my-zsh](https://ohmyz.sh) instead
+
+## TODO
+
+* include oh-my-zsh as git sub-project to avoid separate installation?
+* use omz to load my own zsh scripts as custom plugins?
 
 ## Dependencies
 
- * git
- * zsh
- * vim
+* git
+* zsh
+* vim
+* [oh-my-zsh](https://ohmyz.sh) (NB: Currently installation will create/overwrite .zshrc)
+* [zsh-nvm](https://github.com/lukechilds/zsh-nvm) (install as custom omz plugin)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh) (install as custom omz plugin)
 
 ## Install
 
-Run this:
+First install dependencis, _then_ run this:
 
 ```sh
 git clone --recursive git@github.com:kjarnet/dotfiles.git ~/.dotfiles
