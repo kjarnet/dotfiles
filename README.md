@@ -17,7 +17,7 @@ Notable changes from holman's project include:
 * zsh
 * vim
 * [oh-my-zsh](https://ohmyz.sh) (NB: Currently installation will create/overwrite .zshrc)
-* [zsh-nvm](https://github.com/lukechilds/zsh-nvm) (install as custom omz plugin)
+* [asdf](https://asdf-vm.com) via [omz plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh) (install as custom omz plugin)
 
 ## Install
@@ -39,17 +39,13 @@ The `--recursive` argument is for cloning all git submodules as well.
 Submodules are used for vim pathogen plugins.
 You can read more about that [here](vim/vim.symlink/bundle/README.md).
 
-Note that this will also install nvm (node version manager) through
-[zsh-nvm](https://github.com/lukechilds/zsh-nvm).
-
 You then need to install node with
 
 ```sh
-nvm install node
+asdf plugin add nodejs
+asdf install nodejs latest
 # or
-nvm install --lts
-# or
-nvm install <version>
+asdf install nodejs <version>
 ```
 
 and then do this additional step:
