@@ -16,8 +16,9 @@ Notable changes from holman's project include:
 * git
 * zsh
 * vim
+* fzf for fuzzy search features
 * [oh-my-zsh](https://ohmyz.sh) (NB: Currently installation will create/overwrite .zshrc)
-* [asdf](https://asdf-vm.com) via [omz plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf)
+* [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode#as-an-oh-my-zsh-custom-plugin) (install as custom omz plugin)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh) (install as custom omz plugin)
 
 ## Install

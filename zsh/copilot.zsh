@@ -1,2 +1,2 @@
-eval "$(/opt/homebrew/bin/gh copilot alias -- zsh)"
+# eval "$(/opt/homebrew/bin/gh copilot alias -- zsh)"
 

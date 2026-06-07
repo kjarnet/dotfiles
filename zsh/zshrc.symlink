@@ -9,9 +9,7 @@ fi
 # shortcut to this dotfiles path is $DOT
 export DOT=$HOME/.dotfiles
 
-source $DOT/zsh/ohmyzsh.zsh
-
-for file in $DOT/zsh/*.zsh~**/ohmyzsh.zsh
+for file in $DOT/zsh/*.zsh
 do
   echo "loading "$file
   source $file
@@ -24,8 +22,4 @@ then
   echo "loading ~/.localrc"
   source ~/.localrc
 fi
-
-# Fuzzy complete - depends on fzf application
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 

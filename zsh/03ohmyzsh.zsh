@@ -72,7 +72,10 @@ ZSH_THEME="kphoen"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn zsh-syntax-highlighting mise)
+#
+# vi-mode: Do the initialization when the script is sourced (i.e. Initialize instantly)
+#ZVM_INIT_MODE=sourcing
+plugins=(zsh-vi-mode git mvn zsh-syntax-highlighting mise fzf)
 
 source $ZSH/oh-my-zsh.sh
 

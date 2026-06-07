@@ -18,6 +18,7 @@
         logpretty = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
         loll = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cn (%e) (%cr)%Creset' --all
         lollb = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cn (%e) (%cr)%Creset' --first-parent
+        lolllb = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cn (%e) (%cr)%Creset' --name-status --first-parent
         alias = config --get-regexp 'alias.*'
         # this is aliased to git reset --soft HEAD^ by git-sh, but by overriding it here I dont get so confused when I forget "stash" in "stash pop"
         pop = stash pop

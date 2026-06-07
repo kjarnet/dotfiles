@@ -1,6 +1,9 @@
 [tools]
 helm = "3.17.2"
-node = "22"
+node = "24"
+"npm:oh-my-opencode" = "latest" # oh-my-openagent
+"npm:@ast-grep/cli" = "latest" # optional dependency of oh-my-openagent
+"npm:@code-yeongyu/comment-checker" = "latest" # optional dependency of oh-my-openagent
 usage = "latest"
 
 
